@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <title>Greatness</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Greatness.</div>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="is-drop">
+            <a href="#">Services</a>
+            <ul>
+              <li class="dropdown"><a href="#">Web Design</a></li>
+              <li class="dropdown"><a href="#">E-Commerce</a></li>
+              <li class="dropdown"><a href="#">Branding</a></li>
+              <li class="dropdown"><a href="#">API</a></li>
+            </ul>
+          </li>
+          <li class="is-drop">
+            <a href="#">Dropdown</a>
+            <ul>
+              <li class="dropdown"><a href="#">HTML5</a></li>
+              <li class="dropdown"><a href="#">CSS3</a></li>
+              <li class="dropdown"><a href="#">SASS</a></li>
+              <li class="dropdown"><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="header-content">
+        <h1>Greatness Free Template</h1>
+        <p>
+          Free HTML5 Templates made by<span><a href="#">FreeHTMl5.co</a></span>
+        </p>
+        <button class="btn-active" type="button">Get Started</button>
+        <button class="btn-passive" type="button">Download</button>
+      </section>
+    </header>
+    <section class="features">
+      <div class="feature-content">
+        <div class="feature-item">
+          <div class="icon">
+            <span><i class="far fa-eye"></i></span>
+          </div>
+          <h2>Retina Ready</h2>
+          <p>
+            Dignissimos asperiores vitae velit veniam totam fuga molestias
+            accusamus alias autem provident.
+          </p>
+          <button class="feature-btn">Learn More</button>
+        </div>
+        <div class="feature-item">
+          <div class="icon">
+            <span class="fa"><i class="fas fa-expand-arrows-alt"></i></span>
+          </div>
+          <h2>Fully Responsive</h2>
+          <p>
+            Dignissimos asperiores vitae velit veniam totam fuga molestias
+            accusamus alias autem provident.
+          </p>
+          <button class="feature-btn">Learn More</button>
+        </div>
+        <div class="feature-item">
+          <div class="icon">
+            <span><i class="fas fa-power-off"></i></span>
+          </div>
+          <h2>Web Starter</h2>
+          <p>
+            Dignissimos asperiores vitae velit veniam totam fuga molestias
+            accusamus alias autem provident.
+          </p>
+          <button class="feature-btn">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section class="featured-videos">
+      <div class="video-header">
+        <h1>Watch our Videos</h1>
+        <p>
+          Dignissimos asperiores vitae velit veniam totam fuga molestias
+          accusamus alias autem provident. Odit ab aliquam dolor eius.
+        </p>
+      </div>
+      <div class="video-content" id="videos">
+        <div class="video-item">
+          <div class="video-icon">
+            <a href="#videos"
+              ><span class="video-toggle" onClick="isToggled()"
+                ><i class="fas fa-video"></i></span
+            ></a>
+          </div>
+          <div class="video-popout-bg">
+            <div class="video-popout">
+              <span class="close" onClick="isClosed()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="video-item">
+          <div class="video-icon">
+            <a href="#videos"
+              ><span class="video-toggle" onClick="isToggled()"
+                ><i class="fas fa-video"></i></span
+            ></a>
+          </div>
+          <div class="video-popout-bg">
+            <div class="video-popout">
+              <span class="close" onClick="isClosed()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="video-item">
+          <div class="video-icon">
+            <a href="#videos"
+              ><span class="video-toggle" onClick="isToggled()"
+                ><i class="fas fa-video"></i></span
+            ></a>
+          </div>
+          <div class="video-popout-bg">
+            <div class="video-popout">
+              <span class="close" onClick="isClosed()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="counter">
+      <div class="counter-content">
+        <div class="counter-item">
+          <span class="counter-icon"><i class="far fa-eye"></i></span>
+          <span class="js-counter">22070</span>
+          <span class="counter-description">Creativity Fuel</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-icon"><i class="fas fa-anchor"></i></span>
+          <span class="js-counter">97</span>
+          <span class="counter-description">Happy Clients</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-icon"><i class="fas fa-briefcase"></i></span>
+          <span class="js-counter">402</span>
+          <span class="counter-description">Projects Done</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-icon"><i class="far fa-clock"></i></span>
+          <span class="js-counter">212023</span>
+          <span class="counter-description">Hours Spent</span>
+        </div>
+      </div>
+    </section>
+    <section class="testimonial">
+      <div class="testimonial-inner">
+        <div class="slider-content" id="slide-1">
+          <h1>Testimonal</h1>
+          <div class="img-icon"></div>
+          <span class="icon-name">Jane Doey, via <span>twitter</span></span>
+          <p>
+            “Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean.”
+          </p>
+        </div>
+        <div class="slider-wrapper">
+          <button class="testimonial-slider" id="slider-1"></button>
+          <button class="testimonial-slider" id="slider-2"></button>
+          <button class="testimonial-slider" id="slider-3"></button>
+        </div>
+        <div class="slider-content" id="slide-2">
+          <h1>Testimonal</h1>
+          <div class="img-icon"></div>
+          <span class="icon-name">John Doe, via <span>twitter</span></span>
+          <p>
+            “Separated they live in Bookmarksgrove right at the coast of the
+            Semantics, a large language ocean.”
+          </p>
+        </div>
+        <div class="slider-content" id="slide-3">
+          <h1>Testimonal</h1>
+          <div class="img-icon"></div>
+          <span class="icon-name">John Doe, via <span>twitter</span></span>
+          <p>
+            “Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean.”
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="offers">
+      <div class="offers-wrapper">
+        <h1>What We Offer</h1>
+        <p>
+          Dignissimos asperiores vitae velit veniam totam fuga molestias
+          accusamus alias autem provident. Odit ab aliquam dolor eius.
+        </p>
+        <div class="offers-tabs-wrapper">
+          <ul id="offer-list">
+            <li
+              class="offers-tabs "
+              id="defaultOpen"
+              data-tab="1"
+              onclick="navTabs('webdesign-tab', event)"
+            >
+              <a>Web Design</a>
+            </li>
+            <li
+              class="offers-tabs "
+              data-tab="2"
+              onclick="navTabs('onlinemarketing-tab', event)"
+            >
+              <a>Online Marketing</a>
+            </li>
+            <li
+              class="offers-tabs "
+              data-tab="3"
+              onclick="navTabs('ecommerce-tab', event)"
+            >
+              <a>E-Commerce</a>
+            </li>
+            <li
+              class="offers-tabs "
+              data-tab="4"
+              onclick="navTabs('branding-tab', event)"
+            >
+              <a>Logo & Branding</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offer-tabs-contentwrapper">
+          <div class="offer-tabs-content" id="webdesign-tab">
+            <div class="video-item">
+              <div class="video-icon">
+                <a href="#videos"
+                  ><span class="video-toggle" onClick="isToggled()"
+                    ><i class="fas fa-video"></i></span
+                ></a>
+              </div>
+              <div class="video-popout-bg">
+                <div class="video-popout">
+                  <span class="close" onClick="isClosed()"
+                    ><i class="far fa-times-circle"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-description">
+              <h1>Web Design</h1>
+              <p>
+                Paragraph placeat quis fugiat provident veritatis quia iure a
+                debitis adipisci dignissimos consectetur magni quas eius nobis
+                reprehenderit soluta eligendi quo reiciendis fugit? Veritatis
+                tenetur odio delectus quibusdam officiis est.
+              </p>
+              <p>
+                Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                molestias totam fugiat soluta accusantium omnis quod similique
+                placeat at. Dolorum ducimus libero fuga molestiae asperiores
+                obcaecati corporis sint illo facilis.
+              </p>
+              <div class="tabdesc-row">
+                <div class="tabdesc-col">
+                  <h2>Keep it Simple</h2>
+                  <p>
+                    Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                  </p>
+                </div>
+                <div class="tabdesc-col">
+                  <h2>Less is More</h2>
+                  <p>
+                    Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offer-tabs-content" id="onlinemarketing-tab">
+            <div class="tabs-description">
+              <h1>Online Marketing</h1>
+              <p>
+                Paragraph placeat quis fugiat provident veritatis quia iure a
+                debitis adipisci dignissimos consectetur magni quas eius nobis
+                reprehenderit soluta eligendi quo reiciendis fugit? Veritatis
+                tenetur odio delectus quibusdam officiis est.
+              </p>
+              <p>
+                Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                molestias totam fugiat soluta accusantium omnis quod similique
+                placeat at. Dolorum ducimus libero fuga molestiae asperiores
+                obcaecati corporis sint illo facilis.
+              </p>
+              <div class="tabdesc-row">
+                <div class="tabdesc-col">
+                  <h2>Keep it Simple</h2>
+                  <p>
+                    Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                  </p>
+                </div>
+                <div class="tabdesc-col">
+                  <h2>Less is More</h2>
+                  <p>
+                    Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="video-item">
+              <div class="video-icon">
+                <a href="#videos"
+                  ><span class="video-toggle" onClick="isToggled()"
+                    ><i class="fas fa-video"></i></span
+                ></a>
+              </div>
+              <div class="video-popout-bg">
+                <div class="video-popout">
+                  <span class="close" onClick="isClosed()"
+                    ><i class="far fa-times-circle"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offer-tabs-content" id="ecommerce-tab">
+            <div class="tabs-description">
+              <div class="feature-copy">
+                <span class="icon"><i class="fas fa-check"></i></span>
+                <h3>Retina Ready</h3>
+                <p>
+                  Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia
+                  reprehenderit.
+                </p>
+              </div>
+              <div class="feature-copy">
+                <span class="icon"><i class="fas fa-check"></i></span>
+                <h3>Fully Responsive</h3>
+                <p>
+                  Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia
+                  reprehenderit.
+                </p>
+              </div>
+              <div class="feature-copy">
+                <span class="icon"><i class="fas fa-check"></i></span>
+                <h3>Ready to Use</h3>
+                <p>
+                  Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia
+                  reprehenderit.
+                </p>
+              </div>
+            </div>
+            <div class="video-item">
+              <div class="video-icon">
+                <a href="#videos"
+                  ><span class="video-toggle" onClick="isToggled()"
+                    ><i class="fas fa-video"></i></span
+                ></a>
+              </div>
+              <div class="video-popout-bg">
+                <div class="video-popout">
+                  <span class="close" onClick="isClosed()"
+                    ><i class="far fa-times-circle"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offer-tabs-content" id="branding-tab">
+            <div class="tabs-description">
+              <div class="branding-icon">
+                <span><i class="fab fa-codepen"></i></span>
+              </div>
+              <div class="branding-content">
+                <h1>Logo & Branding</h1>
+                <p>
+                  Paragraph placeat quis fugiat provident veritatis quia iure a
+                  debitis adipisci dignissimos consectetur magni quas eius nobis
+                  reprehenderit soluta eligendi quo reiciendis fugit? Veritatis
+                  tenetur odio delectus quibusdam officiis est.
+                </p>
+                <p>
+                  Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                  molestias totam fugiat soluta accusantium omnis quod similique
+                  placeat at. Dolorum ducimus libero fuga molestiae asperiores
+                  obcaecati corporis sint illo facilis.
+                </p>
+                <div class="tabdesc-row">
+                  <div class="tabdesc-col">
+                    <h2>Keep it Simple</h2>
+                    <p>
+                      Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                    </p>
+                  </div>
+                  <div class="tabdesc-col">
+                    <h2>Less is More</h2>
+                    <p>
+                      Ullam dolorum iure dolore dicta fuga ipsa velit veritatis
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe-form">
+      <div class="form-wrapper">
+        <h2>Subscribe</h2>
+        <p>Be the first to know about the new templates.</p>
+        <form action="" method="post">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Your email" />
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Your name" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-wrapper">
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Meetups</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Creative Design</a></li>
+          <li><a href="#">Branding</a></li>
+          <li><a href="#">Illustration</a></li>
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="#">Monthly Event</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Meetups</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Handbook</a></li>
+          <li><a href="#">Held Desk</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Find Designers</a></li>
+          <li><a href="#">Find Developers</a></li>
+          <li><a href="#">Teams</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Meetups</a></li>
+        </ul>
+      </div>
+      <div class="row-copyright">
+        <div class="left-pull">
+          <p>©2019 Developed by Marcus Davis</p>
+          <p>
+            Designed by <span>FreeHTML5.co</span>Demo Images:<span
+              >Unsplash</span
+            >
+          </p>
+        </div>
+        <div class="right-pull">
+          <span
+            ><a href="#"><i class="fab fa-twitter"></i></a
+          ></span>
+          <span><a href="#"><i class="fab fa-facebook-square"></a></i></span>
+          <span><a href="#"><i class="fab fa-linkedin-in"></i></a></span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
