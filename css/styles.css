@@ -967,6 +967,7 @@ input {
   height: 54px;
   border-radius: 5px;
   padding: 0px 20px;
+  margin: 0 10px;
   transition: 0.3s linear;
 }
 
@@ -1193,7 +1194,7 @@ footer {
 
   li.is-drop:hover ul {
     margin: 2px 20px;
-    height: 120px;
+    height: 130px;
   }
 
   li.is-drop ul {
