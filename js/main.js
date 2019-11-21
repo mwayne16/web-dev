@@ -187,7 +187,41 @@ var carouselSlider = () => {
   });
 };
 carouselSlider();
+var style = (function() {
+  // Create the <style> tag
+  var style = document.createElement("style");
 
+  // WebKit hack
+  style.appendChild(document.createTextNode(""));
+
+  // Add the <style> element to the page
+  document.head.appendChild(style);
+
+  return style;
+})();
+
+var mobileNavToggle = document.querySelectorAll(".nav-toggle i");
+var mobileNav = document.querySelectorAll(".nav-offset");
+var body = document.body;
+var mobileToggle = () => {
+  for (element of mobileNav) {
+    element.classList.toggle("nav-onset");
+  }
+  for (icon of mobileNavToggle) {
+    icon.classList.toggle("nav-istoggled");
+    if (icon.classList.contains("nav-istoggled")) {
+      style.sheet.insertRule("header::after{display:inherit;}", 0);
+      icon.style.margin = "5px 0";
+      body.classList.add("onset");
+    } else {
+      body.classList.remove("onset");
+      style.sheet.deleteRule(0);
+      icon = document.querySelectorAll(".nav-toggle:hover i");
+    }
+  }
+};
+
+var mobileHover = () => {};
 // What we Offer Tabs
 var startTab = () => {
   document.getElementById("defaultOpen").click();

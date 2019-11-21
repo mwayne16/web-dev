@@ -14,10 +14,15 @@ html {
 body,
 html {
   width: 100%;
-  overflow-x: hidden;
+}
+
+.onset {
+  height: 100%;
+  overflow: hidden;
 }
 
 header {
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 90vh;
@@ -48,6 +53,10 @@ nav {
   margin: auto;
   top: 40px;
   color: #fff;
+}
+
+.nav-offset {
+  display: none;
 }
 
 .logo {
@@ -148,8 +157,8 @@ nav ul li a.active {
 section.header-content {
   z-index: 1;
   position: relative;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  transform: translate(-45%, -50%);
+  left: 45%;
   top: 50%;
   width: 100%;
   text-align: center;
@@ -366,6 +375,8 @@ section.featured-videos {
   max-width: 30%;
   height: 250px;
   background: url("/img/img_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 7px;
   transition: 0.3s;
 }
@@ -493,6 +504,7 @@ section.counter span {
 
 .counter-item {
   max-width: 25%;
+  width: 100%;
   text-align: center;
   z-index: 2;
   display: block;
@@ -724,6 +736,14 @@ section.offers {
   border-radius: 5px;
 }
 
+span.desktop-tabs a {
+  font-weight: 100;
+  text-transform: initial;
+}
+span.mobile-tabs {
+  display: none;
+}
+
 li.offers-tabs {
   padding: 0;
   margin: 0;
@@ -837,10 +857,6 @@ li.active a:hover {
   max-width: 50%;
 }
 
-.tabdesc-col:nth-child(1) {
-  padding-right: 15px;
-}
-
 .tabdesc-col h2 {
   font-size: 16px;
   text-transform: uppercase;
@@ -862,7 +878,7 @@ li.active a:hover {
 }
 
 .feature-copy {
-  height: 130px;
+  min-height: 130px;
 }
 
 .feature-copy h3 {
@@ -907,6 +923,7 @@ li.active a:hover {
 .branding-icon span i {
   font-size: 30em;
   color: #f75a16;
+  overflow: hidden;
 }
 
 section.subscribe-form {
@@ -933,6 +950,13 @@ section.subscribe-form {
   font-weight: 500;
   word-spacing: 1px;
   margin-bottom: 40px;
+}
+
+form {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
@@ -988,7 +1012,7 @@ footer {
 
 .footer-links li {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -1027,4 +1051,383 @@ footer {
 
 .right-pull span a {
   color: #f75a16;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 990px) {
+  section.offers {
+    padding: 4em 0;
+  }
+  .video-item {
+    max-width: 75%;
+    margin-bottom: 20px;
+    background-position: center;
+  }
+
+  .counter-content {
+    flex-flow: row wrap;
+  }
+
+  .counter-item {
+    max-width: 50%;
+  }
+
+  .offer-tabs-content {
+    min-width: auto;
+    margin: auto;
+    padding: 10px;
+    flex-flow: column wrap;
+  }
+
+  .offer-tabs-content .video-item {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .tabs-description {
+    max-width: 80%;
+    min-height: 365px;
+  }
+
+  .tabs-description p {
+    margin: 10px 0px;
+    min-width: 100%;
+  }
+
+  .tabs-description h1 {
+    margin: 20px 0px;
+  }
+
+  .tabdesc-row {
+    margin: 20px 0px;
+    flex-flow: column nowrap;
+  }
+
+  #onlinemarketing-tab .tabs-description {
+    order: 2;
+  }
+
+  #ecommerce-tab {
+    min-width: 90%;
+  }
+
+  #ecommerce-tab .tabs-description {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  #branding-tab .tabs-description {
+    flex-flow: column;
+  }
+
+  .branding-content {
+    max-width: 80%;
+  }
+
+  .form-wrapper {
+    padding: 10px;
+  }
+
+  form button {
+    width: 33%;
+  }
+
+  input {
+    width: 33.33%;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 770px) {
+  /* Mobile Navigation */
+
+  nav {
+    position: initial;
+    margin-top: 30px;
+  }
+  nav ul li {
+    margin: 0;
+    display: none;
+  }
+
+  nav ul {
+    position: relative;
+    flex-flow: column;
+  }
+
+  .logo {
+    padding: 20px 0px;
+    color: #fff;
+    z-index: 1000;
+  }
+
+  .nav-offset {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    background: #000;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    padding: 45px 40px 40px 40px;
+    transition: 0.3s linear;
+    transform: translateX(100%);
+  }
+
+  .nav-onset {
+    transform: translateX(0%);
+  }
+
+  .nav-offset ul li {
+    display: block;
+    padding: 5px;
+  }
+
+  li.is-drop:hover ul {
+    margin: 2px 20px;
+    height: 120px;
+  }
+
+  li.is-drop ul {
+    display: block;
+    margin: 0 10px;
+    height: 0px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: none;
+    visibility: visible;
+    transition: 0.2s linear;
+  }
+
+  li.is-drop ul::before {
+    display: none;
+  }
+
+  li.is-drop ul li {
+    padding: 0;
+    text-align: justify;
+  }
+
+  li.is-drop ul a {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  li.is-drop ul a:hover {
+    color: #fff;
+  }
+
+  li.is-drop span {
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+    transition: 0.3s linear;
+  }
+
+  li.is-drop:hover span {
+    transform: rotate(180deg);
+  }
+
+  .nav-toggle {
+    padding: 20px;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    margin: 0 auto;
+    z-index: 2000;
+  }
+
+  a.nav-toggle i {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.2s linear;
+  }
+
+  .mobile-hover:hover {
+    margin-top: 7px;
+  }
+
+  .mobile-hover:hover {
+    margin-top: 7px;
+  }
+
+  .nav-istoggled:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  .nav-istoggled:nth-child(2) {
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  .nav-istoggled:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  header::after {
+    content: "";
+    display: none;
+    z-index: 1;
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  /* Everything Else */
+
+  header {
+    min-height: 700px;
+  }
+  section.features {
+    padding: 5em 20px;
+  }
+  .feature-content {
+    width: auto;
+    margin: 0 auto;
+    flex-flow: column;
+  }
+
+  .feature-item {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .feature-item p {
+    max-width: 600px;
+    margin: auto auto 20px auto;
+  }
+  .feature-btn {
+    margin-bottom: 100px;
+  }
+
+  .feature-item:nth-child(3) button {
+    margin-bottom: 0px;
+  }
+  .counter-content {
+    flex-flow: column;
+  }
+  .counter-item {
+    max-width: 100%;
+  }
+
+  .tabdesc-col {
+    max-width: 100%;
+  }
+  span.desktop-tabs a {
+    display: none;
+  }
+  span.mobile-tabs {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  span.mobile-tabs i {
+    color: #b88787;
+    padding: 25px;
+    font-size: 35px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  li.active i {
+    color: #f75a16;
+    width: 100%;
+    background: #fff;
+  }
+  .branding-content {
+    height: auto;
+  }
+  .branding-icon {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+  .branding-icon span i {
+    font-size: calc(15rem + 3vw);
+  }
+
+  section.subscribe-form {
+    padding: 2em 0;
+  }
+  form {
+    flex-flow: column;
+    padding: 0px 20px;
+  }
+
+  input {
+    min-width: 100%;
+    margin: 0px auto 10px auto;
+  }
+
+  form button {
+    min-width: 100%;
+    margin-top: 0px;
+  }
+
+  footer {
+    padding: 70px 0;
+  }
+  .footer-wrapper {
+    margin: auto;
+    padding: 0 2em;
+    flex-flow: row wrap;
+  }
+
+  ul.footer-links {
+    width: auto;
+    text-align: center;
+  }
+  .footer-block {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: auto;
+  }
+
+  ul.footer-links li {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .row-copyright {
+    flex-flow: column;
+    text-align: center;
+  }
+  .left-pull {
+    margin-bottom: 20px;
+  }
+  #ecommerce-tab .tabs-description p {
+    min-width: 100px;
+    margin: 10px 0px 10px 50px;
+  }
+
+  .feature-copy p {
+    width: auto;
+  }
+
+  .feature-copy {
+    margin-top: 50px;
+  }
 }
