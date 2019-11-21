@@ -967,7 +967,7 @@ input {
   height: 54px;
   border-radius: 5px;
   margin-right: 20px;
-  padding: 10px 20px;
+  padding: 0px 20px;
   transition: 0.3s linear;
 }
 
