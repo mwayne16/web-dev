@@ -977,6 +977,7 @@ input::placeholder {
   font-weight: 500;
   cursor: #fff;
   margin: auto;
+  overflow: visible;
 }
 
 input:focus {
