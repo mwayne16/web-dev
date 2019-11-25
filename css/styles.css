@@ -148,6 +148,8 @@ nav ul li a {
   color: rgba(255, 255, 255, 0.4);
   transition: 0.3s linear;
   font-size: 18px;
+  display: block;
+  width: 100%;
 }
 
 nav ul li a.active {
@@ -1193,7 +1195,7 @@ footer {
 
   .nav-offset ul li {
     display: block;
-    padding: 5px;
+    padding: 5px 0px;
   }
 
   li.is-drop:hover ul {
