@@ -119,7 +119,27 @@ window.addEventListener("scroll", counterHandler, true);
 function counterHandler() {
   var counter = document.querySelectorAll(".counter-item");
   y = window.scrollY;
-  if (y >= 1400) {
+  w = window.innerWidth;
+  console.log(y);
+  if (w > 990 && y >= 1400) {
+    window.removeEventListener("scroll", counterHandler, true);
+    counter.forEach(item => {
+      item.classList.add("feature-scroll");
+    });
+    animateValue1("value", 15000, 22070, 3000);
+    animateValue2("value", 0, 97, 3000);
+    animateValue3("value", 202, 402, 3000);
+    animateValue4("value", 211300, 212023, 3000);
+  } else if (w < 990 && w > 770 && y >= 2100) {
+    window.removeEventListener("scroll", counterHandler, true);
+    counter.forEach(item => {
+      item.classList.add("feature-scroll");
+    });
+    animateValue1("value", 15000, 22070, 3000);
+    animateValue2("value", 0, 97, 3000);
+    animateValue3("value", 202, 402, 3000);
+    animateValue4("value", 211300, 212023, 3000);
+  } else if (w < 770 && y >= 2800) {
     window.removeEventListener("scroll", counterHandler, true);
     counter.forEach(item => {
       item.classList.add("feature-scroll");
@@ -135,7 +155,16 @@ var sliderButtons = document.querySelectorAll(".testimonial-slider");
 
 // Event listener
 window.addEventListener("scroll", () => {
-  if (y >= 1900) {
+  w = window.innerWidth;
+  if (w > 990 && y >= 1900) {
+    sliderContent.forEach(slide => {
+      slide.classList.add("sliderFade");
+    });
+  } else if (w < 990 && w > 770 && y >= 2900) {
+    sliderContent.forEach(slide => {
+      slide.classList.add("sliderFade");
+    });
+  } else if (w < 770 && y >= 4000) {
     sliderContent.forEach(slide => {
       slide.classList.add("sliderFade");
     });
@@ -148,7 +177,17 @@ var nodeList = document.querySelector(".offers-wrapper").children;
 var offerArray = Array.from(nodeList);
 window.addEventListener("scroll", () => {
   var y = window.scrollY;
-  if (y >= 2500) {
+  if (w > 990 && y >= 2800) {
+    offersWrapper.classList.add("offers-children-animation");
+    offerArray.forEach(item => {
+      item.classList.add("offers-children-animation");
+    });
+  } else if (w < 990 && w > 770 && y >= 3600) {
+    offersWrapper.classList.add("offers-children-animation");
+    offerArray.forEach(item => {
+      item.classList.add("offers-children-animation");
+    });
+  } else if (w < 770 && y >= 4800) {
     offersWrapper.classList.add("offers-children-animation");
     offerArray.forEach(item => {
       item.classList.add("offers-children-animation");
@@ -162,7 +201,17 @@ var subscribeWrapper = document.querySelector(".form-wrapper").children;
 var subscribeArray = Array.from(subscribeWrapper);
 window.addEventListener("scroll", () => {
   var y = window.scrollY;
-  if (y >= 3500) {
+  if (w > 990 && y >= 3500) {
+    formWrapper.classList.add("offers-children-animation");
+    subscribeArray.forEach(item => {
+      item.classList.add("offers-children-animation");
+    });
+  } else if (w < 990 && w > 770 && y >= 4800) {
+    formWrapper.classList.add("offers-children-animation");
+    subscribeArray.forEach(item => {
+      item.classList.add("offers-children-animation");
+    });
+  } else if (w < 770 && y >= 5900) {
     formWrapper.classList.add("offers-children-animation");
     subscribeArray.forEach(item => {
       item.classList.add("offers-children-animation");
@@ -187,6 +236,7 @@ var carouselSlider = () => {
   });
 };
 carouselSlider();
+
 var style = (function() {
   // Create the <style> tag
   var style = document.createElement("style");
