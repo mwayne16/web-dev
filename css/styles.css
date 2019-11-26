@@ -164,9 +164,10 @@ section.header-content {
   top: 50%;
   width: 100%;
   text-align: center;
+  padding: 14em 0;
 }
 
-section.header-content h1 {
+section.header-content h1.banner-title {
   display: block;
   color: #fff;
   font-size: calc(2.5rem + 2.9vw);
@@ -176,14 +177,14 @@ section.header-content h1 {
   margin-bottom: 10px;
 }
 
-section.header-content p {
+section.header-content p.banner-desc {
   font-size: 22px;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 
-section.header-content span a {
+.banner-span a {
   color: rgba(255, 255, 255, 0.7);
   padding-left: 5px;
   border-bottom: 1px solid;
@@ -192,7 +193,7 @@ section.header-content span a {
   font-weight: 100;
 }
 
-section.header-content span a:hover {
+section.header-content span.banner-span a:hover {
   color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid #fff;
 }
@@ -1434,5 +1435,9 @@ footer {
 
   .feature-copy {
     margin-top: 50px;
+  }
+
+  section.header-content {
+    transform: translate(-45%, -60%);
   }
 }

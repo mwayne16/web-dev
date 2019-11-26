@@ -266,12 +266,10 @@ var mobileToggle = () => {
     } else {
       body.classList.remove("onset");
       style.sheet.deleteRule(0);
-      icon = document.querySelectorAll(".nav-toggle:hover i");
     }
   }
 };
 
-var mobileHover = () => {};
 // What we Offer Tabs
 var startTab = () => {
   document.getElementById("defaultOpen").click();
