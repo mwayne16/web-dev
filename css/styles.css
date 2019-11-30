@@ -164,7 +164,6 @@ section.header-content {
   top: 50%;
   width: 100%;
   text-align: center;
-  padding: 14em 0;
 }
 
 section.header-content h1.banner-title {
@@ -1439,5 +1438,6 @@ footer {
 
   section.header-content {
     transform: translate(-45%, -60%);
+    padding-bottom: 5em;
   }
 }
