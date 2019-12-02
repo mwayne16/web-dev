@@ -1,5 +1,5 @@
 /*Google Fonts*/
-
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700&display=swap");
 
 *,
@@ -8,7 +8,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body,
@@ -45,7 +45,7 @@ header::before {
 nav {
   z-index: 1;
   position: relative;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -67,8 +67,7 @@ nav {
   align-self: flex-start;
 }
 
-nav ul li a:hover,
-a:active {
+nav ul li a:hover {
   color: rgba(255, 255, 255, 1);
 }
 
@@ -115,6 +114,17 @@ li.is-drop ul::before {
   background: rgb(255, 255, 255);
 }
 
+li.is-drop ul::after {
+  content: "";
+  height: 200px;
+  width: 140px;
+  position: absolute;
+  background: none;
+  top: -30px;
+  left: 0;
+  z-index: -1;
+}
+
 li.is-drop ul li {
   margin-top: 8px;
 }
@@ -147,15 +157,14 @@ nav ul li {
 nav ul li a {
   color: rgba(255, 255, 255, 0.4);
   transition: 0.3s linear;
-  font-size: 18px;
+  font-size: 16px;
   display: block;
   width: 100%;
 }
 
-nav ul li a.active {
+a.active {
   color: #fff;
 }
-
 section.header-content {
   z-index: 1;
   position: relative;
@@ -239,6 +248,7 @@ section.features {
 .feature-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 35px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -678,7 +688,6 @@ section.offers {
 }
 
 .offers-children-animation:nth-child(1) {
-  margin: 20px auto;
   animation-delay: 0.2s;
 }
 
@@ -739,7 +748,7 @@ section.offers {
 }
 
 span.desktop-tabs a {
-  font-weight: 100;
+  font-weight: 300;
   text-transform: initial;
 }
 span.mobile-tabs {
@@ -793,6 +802,7 @@ li.active a:hover {
   transition: 0.3s linear;
   animation: FadeinDown 1s forwards;
   opacity: 1;
+  display: flex;
 }
 
 @keyframes FadeinDown {
@@ -845,7 +855,7 @@ li.active a:hover {
 }
 
 .tabs-description p {
-  font-size: 19px;
+  font-size: 18px;
   word-spacing: 1px;
 }
 
@@ -935,8 +945,9 @@ section.subscribe-form {
   text-align: center;
 }
 
+/* Home Page */
 .form-wrapper {
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-wrapper h2 {
@@ -954,14 +965,14 @@ section.subscribe-form {
   margin-bottom: 40px;
 }
 
-form {
+.subscribe-section form {
   min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-input {
+.subscribe-input {
   outline: none;
   border: none;
   background: #5c5c5c;
@@ -976,7 +987,7 @@ input {
   font-size: 18px;
 }
 
-input::placeholder {
+.subscribe-input input::placeholder {
   color: rgb(230, 228, 228);
   font-size: 1.2rem;
   font-weight: 500;
@@ -985,7 +996,7 @@ input::placeholder {
   overflow: visible;
 }
 
-input:focus {
+.subscribe-input:focus {
   background: transparent;
   border: 2px solid #fff;
   caret-color: #fff;
@@ -994,7 +1005,7 @@ input:focus {
 label {
   display: none;
 }
-form button {
+.form-btn {
   height: 54px;
   border: none;
   background: #f75a16;
@@ -1019,8 +1030,8 @@ footer {
 
 .footer-links li {
   margin-bottom: 10px;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .footer-links a {
@@ -1136,12 +1147,12 @@ footer {
     padding: 10px;
   }
 
-  form button {
-    width: 33%;
+  .form-btn {
+    max-width: 30%;
   }
 
-  input {
-    width: 33.33%;
+  .subscribe-input {
+    max-width: 30%;
   }
 
   nav {
@@ -1382,14 +1393,14 @@ footer {
     padding: 0px 20px;
   }
 
-  input {
+  .subscribe-input {
     min-width: 100%;
     margin: 0px auto 10px auto;
   }
 
-  form button {
+  .form-btn {
     min-width: 100%;
-    margin-top: 0px;
+    margin: 0;
   }
 
   footer {
@@ -1414,7 +1425,6 @@ footer {
 
   ul.footer-links li {
     text-align: left;
-    font-size: 1.5rem;
   }
   .row-copyright {
     flex-flow: column;

@@ -1,9 +1,8 @@
 // features fade in
-if (window.location.pathname == "/index.html") {
+if (document.getElementById("defaultOpen") != null)
   window.onload = function() {
     this.startTab();
   };
-}
 
 (function featureItemAnim() {
   var elements;
@@ -135,7 +134,7 @@ function animateValue4(id, start, end, duration) {
 window.addEventListener("scroll", counterHandler, true);
 
 function counterHandler() {
-  if (window.location.pathname == "/index.html") {
+  if (document.querySelectorAll(".counter-item").length > 0) {
     var counter = document.querySelectorAll(".counter-item");
     y = window.scrollY;
     w = window.innerWidth;
@@ -169,7 +168,7 @@ var sliderContent = document.querySelectorAll(".slider-content");
 var sliderButtons = document.querySelectorAll(".testimonial-slider");
 
 // Event listener
-if (window.location.pathname == "/index.html") {
+if (document.querySelectorAll(".slider-content") != null) {
   window.addEventListener("scroll", () => {
     w = window.innerWidth;
     y = window.scrollY;
@@ -185,29 +184,42 @@ if (window.location.pathname == "/index.html") {
   });
 }
 // What we Offer FadeIn
-if (window.location.pathname == "/index.html") {
+if (document.querySelector(".offers-wrapper") != null) {
   var offersWrapper = document.querySelector(".offers-wrapper");
   var nodeList = document.querySelector(".offers-wrapper").children;
   var offerArray = Array.from(nodeList);
 
-  window.addEventListener("scroll", () => {
-    var y = window.scrollY;
-    offerArray.forEach(item => {
-      if (w > 990 && y >= 2800) {
-        offersWrapper.classList.add("offers-children-animation");
+  (function offersAnimation() {
+    var elements;
+    var windowHeight;
 
-        item.classList.add("offers-children-animation");
-      } else if (w < 990 && w > 770 && y >= 3600) {
-        offersWrapper.classList.add("offers-children-animation");
-        item.classList.add("offers-children-animation");
-      } else if (w < 770 && y >= 4800) {
-        offersWrapper.classList.add("offers-children-animation");
-        item.classList.add("offers-children-animation");
+    function init() {
+      elements = offerArray;
+      windowHeight = window.innerHeight;
+    }
+
+    function checkPosition() {
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var positionFromTop = elements[i].getBoundingClientRect().top;
+        if (positionFromTop - windowHeight <= 0) {
+          element.classList.add("offers-children-animation");
+          offersWrapper.classList.add("offers-children-animation");
+        }
       }
-    });
-  });
+    }
+
+    window.addEventListener("scroll", checkPosition);
+    window.addEventListener("resize", init);
+
+    init();
+    checkPosition();
+  })();
 }
 //Subscribe form FadeIn
+// offersWrapper.classList.add("offers-children-animation");
+
+//item.classList.add("offers-children-animation");
 var formWrapper = document.querySelector(".form-wrapper");
 var subscribeWrapper = document.querySelector(".form-wrapper").children;
 var subscribeArray = Array.from(subscribeWrapper);
@@ -217,7 +229,7 @@ var subscribeArray = Array.from(subscribeWrapper);
   var windowHeight;
 
   function init() {
-    elements = subscribeArray;
+    elements = subscribeWrapper;
     windowHeight = window.innerHeight;
   }
 
@@ -227,7 +239,6 @@ var subscribeArray = Array.from(subscribeWrapper);
       var positionFromTop = elements[i].getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= 0) {
         element.classList.add("offers-children-animation");
-        formWrapper.classList.add("offers-children-animation");
       }
     }
   }
@@ -314,22 +325,6 @@ var mobileToggle = () => {
 
 // WCU Section Fade
 
-window.addEventListener("scroll", wcuAnimation);
-
-function wcuAnimation() {
-  if (window.location.pathname == "/about.html") {
-    y = window.scrollY;
-    w = window.innerWidth;
-    var featureChildren = document.querySelectorAll(".feature-copy");
-    if (y >= 200 && w > 990) {
-      for (item of featureChildren) {
-        item.classList.remove("hidden");
-        item.classList.add("featureAnimation");
-      }
-    }
-  }
-}
-
 (function featureAnimation() {
   var elements;
   var windowHeight;
@@ -345,7 +340,7 @@ function wcuAnimation() {
       var positionFromTop = elements[i].getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= 0) {
         element.classList.remove("hidden");
-        element.classList.add("mobileFeatureAnimation");
+        element.classList.add("featureAnimation");
       }
     }
   }
@@ -358,14 +353,14 @@ function wcuAnimation() {
 })();
 
 // Staff Section
+if (document.querySelectorAll(".staff-container") !== null) {
+  window.addEventListener("scroll", staffAnimtaion);
 
-window.addEventListener("scroll", staffAnimtaion);
-
-function staffAnimtaion() {
-  if (window.location.pathname == "/about.html") {
+  function staffAnimtaion() {
     var staffRow = document.querySelectorAll(".staff-row");
     var row1 = Array.from(staffRow[0].children);
     var row2 = Array.from(staffRow[1].children);
+    y = window.scrollY;
     row1.forEach(item => {
       if (y >= 1600 && window.innerWidth > 990) {
         item.classList.add("staffAnimation1");
@@ -381,32 +376,32 @@ function staffAnimtaion() {
       ? document.querySelector(".staff-title").classList.add("wcuText")
       : document.querySelector(".staff-title").classList.remove("wcuText");
   }
-}
-if (window.innerWidth < 990) {
-  (function mobileStaffAnimation() {
-    var elements;
-    var windowHeight;
+  if (window.innerWidth < 990) {
+    (function mobileStaffAnimation() {
+      var elements;
+      var windowHeight;
 
-    function init() {
-      elements = document.querySelectorAll(".staff-item, .staff-title");
-      windowHeight = window.innerHeight;
-    }
+      function init() {
+        elements = document.querySelectorAll(".staff-item, .staff-title");
+        windowHeight = window.innerHeight;
+      }
 
-    function checkPosition() {
-      for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        var positionFromTop = elements[i].getBoundingClientRect().top;
-        if (positionFromTop - windowHeight <= 0) {
-          element.classList.remove("hidden");
-          element.classList.add("mobileStaffAnimation");
+      function checkPosition() {
+        for (var i = 0; i < elements.length; i++) {
+          var element = elements[i];
+          var positionFromTop = elements[i].getBoundingClientRect().top;
+          if (positionFromTop - windowHeight <= 0) {
+            element.classList.remove("hidden");
+            element.classList.add("mobileStaffAnimation");
+          }
         }
       }
-    }
 
-    window.addEventListener("scroll", checkPosition);
-    window.addEventListener("resize", init);
+      window.addEventListener("scroll", checkPosition);
+      window.addEventListener("resize", init);
 
-    init();
-    checkPosition();
-  })();
+      init();
+      checkPosition();
+    })();
+  }
 }

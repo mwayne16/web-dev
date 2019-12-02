@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/pages.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Greatness.</div>
+        <a class="nav-toggle" onclick="mobileToggle()" href="#"
+          ><i></i>
+          <i></i>
+          <i></i
+        ></a>
+        <div class="nav-offset">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="is-drop">
+              <span><i class="fas fa-chevron-down"></i></span>
+              <a href="services.html">Services</a>
+              <ul>
+                <li class="dropdown"><a href="#">Web Design</a></li>
+                <li class="dropdown"><a href="#">E-Commerce</a></li>
+                <li class="dropdown"><a href="#">Branding</a></li>
+                <li class="dropdown"><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="is-drop">
+              <span><i class="fas fa-chevron-down"></i></span>
+              <a href="#">Dropdown</a>
+              <ul>
+                <li class="dropdown"><a href="#">HTML5</a></li>
+                <li class="dropdown"><a href="#">CSS3</a></li>
+                <li class="dropdown"><a href="#">SASS</a></li>
+                <li class="dropdown"><a href="#">JavaScript</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="is-drop">
+            <a href="services.html">Services</a>
+            <ul>
+              <li class="dropdown"><a href="#">Web Design</a></li>
+              <li class="dropdown"><a href="#">E-Commerce</a></li>
+              <li class="dropdown"><a href="#">Branding</a></li>
+              <li class="dropdown"><a href="#">API</a></li>
+            </ul>
+          </li>
+          <li class="is-drop">
+            <a href="#">Dropdown</a>
+            <ul>
+              <li class="dropdown"><a href="#">HTML5</a></li>
+              <li class="dropdown"><a href="#">CSS3</a></li>
+              <li class="dropdown"><a href="#">SASS</a></li>
+              <li class="dropdown"><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="header-content">
+        <h1 class="banner-title">Get in Touch</h1>
+    </header>
+</section>
+    <section class="form">
+        <div class="contact-form-wrapper">
+          <div class="contact-form-container">
+              <h3 class="contact-header">Get in Touch</h3>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                 <div class="form-column">
+                <label for="fname">First Name</label>
+                <input id="fname" class="form-control" type="text" placeholder="Enter Firstname">
+                 </div>
+                 <div class="form-column">
+                <label for="lname">Last Name</label>
+                <input id="lname" class="form-control" type="text" placeholder="Enter Lastname">
+                 </div>
+             </div>
+                <label for="email">E-mail</label>
+                <input id="email" class="form-control" type="email" placeholder="Your email address">
+                <label for="subject">Subject</label>
+                <input id="subject" class="form-control" type="text" placeholder="Your subject of this message">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" name="message" cols="30" rows="10" placeholder="Write us something"></textarea>
+            </form>
+          </div>
+            <div class="contact-info-wrapper">
+          <div class="contact-info">
+            <h3 class="contact-header">USA Office</h3>
+            <ul>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+              <li class="location">198 West 21th Street,
+                        Suite 721 New York NY 10016</li>
+                        <span><i class="fas fa-phone"></i></span>
+                        <li class="phone">+ 1235 2355 98</li>
+                        <span><i class="far fa-envelope"></i></span>
+                       <li class="email"> info@yoursite.com</li>
+                       <span><i class="fas fa-globe-americas"></i></span>
+                        <li class="site">FreeHTML5.co</li>
+            </ul>
+          </div>
+          <div class="contact-info">
+            <h3 class="contact-header">Australia Office</h3>
+            <ul>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+              <li class="location">198 West 21th Street,
+                        Suite 721 New York NY 10016</li>
+                        <span><i class="fas fa-phone"></i></span>
+                        <li class="phone">+ 1235 2355 98</li>
+                        <span><i class="far fa-envelope"></i></span>
+                       <li class="email"> info@yoursite.com</li>
+                       <span><i class="fas fa-globe-americas"></i></span>
+                        <li class="site">FreeHTML5.co</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe-form">
+      <div class="form-wrapper">
+        <h2>Subscribe</h2>
+        <p>Be the first to know about the new templates.</p>
+        <form class="subscribe-section" action="#" method="post">
+          <label for="email">Email</label>
+          <input class="subscribe-input" type="email" name="email" placeholder="Your email" />
+          <label for="name">Name</label>
+          <input class="subscribe-input" type="text" name="name" placeholder="Your name" />
+          <button class="form-btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+        <footer>
+          <div class="footer-wrapper">
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Meetups</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">Creative Design</a></li>
+              <li><a href="#">Branding</a></li>
+              <li><a href="#">Illustration</a></li>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Monthly Event</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Meetups</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Handbook</a></li>
+              <li><a href="#">Held Desk</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">Find Designers</a></li>
+              <li><a href="#">Find Developers</a></li>
+              <li><a href="#">Teams</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Meetups</a></li>
+            </ul>
+          </div>
+        </div>
+          <div class="row-copyright">
+            <div class="left-pull">
+              <p>©2019 Developed by Marcus Davis</p>
+              <p>
+                Designed by <span>FreeHTML5.co</span>Demo Images:<span
+                  >Unsplash</span
+                >
+              </p>
+            </div>
+            <div class="right-pull">
+              <span
+                ><a href="#"><i class="fab fa-twitter"></i></a
+              ></span>
+              <span><a href="#"><i class="fab fa-facebook-square"></a></i></span>
+              <span><a href="#"><i class="fab fa-linkedin-in"></i></a></span>
+            </div>
+          </div>
+        </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
