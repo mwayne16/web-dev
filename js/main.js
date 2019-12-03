@@ -4,6 +4,27 @@ if (document.getElementById("defaultOpen") != null)
     this.startTab();
   };
 
+// Scroll Top BTN
+window.addEventListener("click", toTop);
+window.addEventListener("scroll", checkPosTop);
+var topBtn = document.querySelector(".toTop");
+function checkPosTop() {
+  y = window.scrollY;
+  if (y >= 400) {
+    topBtn.classList.add("feature-scroll");
+    topBtn.className = topBtn.className.replace("fadeOut", "");
+  } else if (y < 400) {
+    topBtn.className = topBtn.className.replace("feature-scroll", "fadeOut");
+  }
+}
+checkPosTop();
+
+function toTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 (function featureItemAnim() {
   var elements;
   var windowHeight;
@@ -239,6 +260,7 @@ var subscribeArray = Array.from(subscribeWrapper);
       var positionFromTop = elements[i].getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= 0) {
         element.classList.add("offers-children-animation");
+        formWrapper.classList.add("offers-children-animation");
       }
     }
   }

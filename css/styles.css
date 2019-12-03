@@ -239,6 +239,28 @@ button.btn-passive:hover {
   color: rgb(0, 0, 0);
 }
 
+aside .toTop {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #000;
+  font-size: 1.5em;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+aside span .fa-arrow-up {
+  line-height: 50px;
+}
+
 section.features {
   width: 100%;
   position: relative;
@@ -266,6 +288,17 @@ section.features {
   animation-name: fadeIn;
   animation-duration: 0.6s;
   animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.toTop.feature-scroll {
+  animation-duration: 0.3s;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
 }
 
 @keyframes fadeIn {
@@ -278,6 +311,19 @@ section.features {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+    visibility: hidden;
   }
 }
 
@@ -678,13 +724,16 @@ section.offers {
   text-align: center;
   margin: 0 auto;
   opacity: 0;
+  visibility: hidden;
 }
 
 .offers-children-animation {
   animation-name: childAnimate;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-fill-mode: both;
+  animation-timing-function: linear;
   opacity: 0;
+  visibility: hidden;
 }
 
 .offers-children-animation:nth-child(1) {
@@ -706,10 +755,12 @@ section.offers {
 @keyframes childAnimate {
   from {
     opacity: 0;
+    visibility: hidden;
     margin-top: 200px;
   }
   to {
     opacity: 1;
+    visibility: visible;
     margin-top: 0px;
   }
 }
@@ -791,6 +842,8 @@ li.active a:hover {
   display: flex;
   flex-flow: row wrap;
   overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
 }
 .offer-tabs-content {
   min-width: 100%;
@@ -947,7 +1000,7 @@ section.subscribe-form {
 
 /* Home Page */
 .form-wrapper {
-  opacity: 1;
+  opacity: 0;
 }
 
 .form-wrapper h2 {
@@ -955,6 +1008,8 @@ section.subscribe-form {
   font-size: 3em;
   font-weight: 400;
   margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .form-wrapper p {
@@ -963,6 +1018,8 @@ section.subscribe-form {
   font-weight: 500;
   word-spacing: 1px;
   margin-bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .subscribe-section form {
@@ -970,6 +1027,8 @@ section.subscribe-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .subscribe-input {
@@ -1449,5 +1508,31 @@ footer {
   section.header-content {
     transform: translate(-45%, -60%);
     padding-bottom: 5em;
+  }
+
+  /* Feature Item Mobile Anim */
+
+  .feature-scroll:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-scroll:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-scroll:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-scroll:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-scroll:nth-child(5) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-scroll:nth-child(6) {
+    animation-delay: 0.2s;
   }
 }
