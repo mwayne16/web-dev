@@ -5,9 +5,9 @@ if (document.getElementById("defaultOpen") != null)
   };
 
 // Scroll Top BTN
-window.addEventListener("click", toTop);
-window.addEventListener("scroll", checkPosTop);
 var topBtn = document.querySelector(".toTop");
+topBtn.addEventListener("click", toTop);
+window.addEventListener("scroll", checkPosTop);
 function checkPosTop() {
   y = window.scrollY;
   if (y >= 400) {
